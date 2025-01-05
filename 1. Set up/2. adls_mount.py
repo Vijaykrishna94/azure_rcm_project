@@ -1,6 +1,6 @@
 # Databricks notebook source
-storageAccountName = "ttadlsdev"
-storageAccountAccessKey = dbutils.secrets.get('tt-hc-kv', 'tt-adls-access-key-dev')
+storageAccountName = "vjadlsdev"
+storageAccountAccessKey = dbutils.secrets.get('vj-hc-kv', 'vj-adls-access-key-dev')
 mountPoints=["gold","silver","bronze","landing","configs"]
 for mountPoint in mountPoints:
     if not any(mount.mountPoint == f"/mnt/{mountPoint}" for mount in dbutils.fs.mounts()):
