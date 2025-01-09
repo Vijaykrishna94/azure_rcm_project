@@ -15,9 +15,9 @@
 # MAGIC
 # MAGIC -- Union the two views
 # MAGIC CREATE OR REPLACE TEMP VIEW encounters AS
-# MAGIC SELECT * FROM hosa_encounters
+# MAGIC SELECT *, 'hosa' AS datasource FROM hosa_encounters
 # MAGIC UNION ALL
-# MAGIC SELECT * FROM hosb_encounters;
+# MAGIC SELECT *, 'hosb' AS datasource FROM hosb_encounters;
 # MAGIC
 # MAGIC -- Display the merged data
 # MAGIC SELECT * FROM encounters;
@@ -53,7 +53,7 @@
 
 # MAGIC %sql
 # MAGIC select * from quality_checks
-# MAGIC where datasource='hos-b'
+# MAGIC where datasource='hosb'
 
 # COMMAND ----------
 
