@@ -2,10 +2,10 @@
 from pyspark.sql import SparkSession, functions as f
 
 #Reading Hospital A departments data 
-df_hosa=spark.read.parquet("/mnt/bronze/hosa/transactions")
+df_hosa=spark.read.parquet("/mnt/bronze/hosa/transactions").withColumn("datasource",f.lit("hosa"))
 
 #Reading Hospital B departments data 
-df_hosb=spark.read.parquet("/mnt/bronze/hosb/transactions")
+df_hosb=spark.read.parquet("/mnt/bronze/hosb/transactions").withColumn("datasource",f.lit("hosb"))
 
 #union two departments dataframes
 df_merged = df_hosa.unionByName(df_hosb)

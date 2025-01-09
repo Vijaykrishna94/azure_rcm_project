@@ -1,10 +1,10 @@
 # Databricks notebook source
 #Reading Hospital A patient data 
-df_hosa=spark.read.parquet("/mnt/bronze/hosa/patients")
+df_hosa=spark.read.parquet("/mnt/bronze/hosa/patients").withColumn("datasource",f.lit("hosa"))
 df_hosa.createOrReplaceTempView("patients_hosa")
 
 #Reading Hospital B patient data 
-df_hosb=spark.read.parquet("/mnt/bronze/hosb/patients")
+df_hosb=spark.read.parquet("/mnt/bronze/hosb/patients").withColumn("datasource",f.lit("hosb"))
 df_hosb.createOrReplaceTempView("patients_hosb")
 
 # COMMAND ----------
