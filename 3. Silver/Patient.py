@@ -1,4 +1,5 @@
 # Databricks notebook source
+from pyspark.sql import SparkSession, functions as f
 #Reading Hospital A patient data 
 df_hosa=spark.read.parquet("/mnt/bronze/hosa/patients").withColumn("datasource",f.lit("hosa"))
 df_hosa.createOrReplaceTempView("patients_hosa")

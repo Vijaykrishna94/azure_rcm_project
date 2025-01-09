@@ -32,7 +32,7 @@ select
   t.SRC_TransactionID,
   t.EncounterID,
   concat(t.PatientID,'-',t.datasource ) as FK_Patient_ID,
-  case when t.datasource='hos-a' then concat('H1-',t.providerID) else concat('H2-',t.providerID ) end as FK_Provider_ID, 
+  case when t.datasource='hosa' then concat('H1-',t.providerID) else concat('H2-',t.providerID ) end as FK_Provider_ID, 
   concat(t.DeptID,'-',t.datasource ) as FK_Dept_ID, 
   t.ICDCode,
   t.ProcedureCode CPT_Code,
