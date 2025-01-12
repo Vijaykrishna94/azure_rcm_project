@@ -11,7 +11,9 @@
 # MAGIC   left join gold.dim_department dd on dd.Dept_Id = p.DeptID
 # MAGIC group by
 # MAGIC   all ;
+
 # COMMAND ----------
+
 # MAGIC %sql
 # --Total Charge Amount per provider by department for each month for year 2024
 # MAGIC CREATE OR REPLACE TABLE gold.amt_provider_mnthly_2024 AS
