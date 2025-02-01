@@ -37,7 +37,12 @@
      
  ![image](https://github.com/user-attachments/assets/b7980309-4e4b-4742-b5a5-e5a2f9965caf)
 
-  #####  Checks The Type of Load (Full/Incremental Based On Audit Table) and Loads the data Into ADLS Bronze Layer 
+  #####  Checks The Type of Load (Full/Incremental Based On Config Table) and Loads the data Into ADLS Bronze Layer 
+
+  ###### Configs
+  
+   ![image](https://github.com/user-attachments/assets/deada2c8-d3f2-419b-8633-bde616ce183f)
+
 
 ![image](https://github.com/user-attachments/assets/03c0600b-7162-4dfb-9213-bcde20fcf10e)
 
